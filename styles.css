@@ -1,39 +1,60 @@
-body {
+body, html {
     background: linear-gradient(266deg, #ff0000, #0000ff);
     background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 main {
     color: white;
-    text-align: center;
 }
 
 h1 {
+    display:block;
     background-color: black;
     border-radius: 70px;
     border: solid white 2px;
-    margin: 15% 35%;
-    font-size: 200px;
+    font-size: 10em;
     padding-bottom: 0px;
     margin-bottom: 0px;
+    margin-top: -5%;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+.mid {
+    text-align: center;
 }
 
 h2 {
+    display: inline-block;
     background-color: black;
     border-radius: 70px;
     border: solid white 2px;
     margin: auto 40%;
     padding-bottom: 0px;
     margin-bottom: 0px;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 p {
+        display: inline-block;
+        position: relative;
         background-color: black;
         border-radius: 70px;
         border: solid white 2px;
         margin: auto 45%;
         padding-bottom: 0px;
         margin-bottom: 0px;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        animation-name: move;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
     }
 
 a:visited {
@@ -57,4 +78,11 @@ p:hover a {
     color: black;
 }
 
+@keyframes move {
+    0%  {right:0px;}
+    25% {right: 600px;}
+    50% {right: -600px;}
+    75% {right: 1200px;}
+    100% {right:0px;}
+}
 
